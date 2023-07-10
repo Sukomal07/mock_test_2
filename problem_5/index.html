@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem 5</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Validation</h1>
+        <form onsubmit="validateForm()" id="form">
+            <div class="name">
+                <label for="name">Name</label>
+                <input type="text" id="name"  required placeholder="Enter Your Name" name="name">
+                <span class="error-message"></span>
+            </div>
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="Enter your email">
+                <span class="error-message"></span>
+            </div>
+            <div class="phone">
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" required placeholder="Enter your phone number">
+                <span class="error-message"></span>
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required placeholder="Enter your password">
+                <span class="error-message"></span>
+            </div>
+            <div class="age">
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" min="18" max="100" required placeholder="Enter your age">
+                <span class="error-message"></span>
+            </div>
+            <div class="gender">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+                <span class="error-message"></span>
+            </div>
+            <div class="dob">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="color">
+                <label for="color">Favorite Color</label>
+                <input type="color" name="color" id="color" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="button">
+                <input type="submit" id="submit" value="submit">
+            </div>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

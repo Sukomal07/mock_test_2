@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem 2</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input{
+        margin-bottom: 20px;
+    }
+    #inputBox{
+        padding: 0.5rem 1rem;
+        font-size: 20px;
+        outline: none;
+        margin-right: 15px;
+    }
+    #button{
+        padding: 0.5rem 1rem;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    #inputList{
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" placeholder="type here" id="inputBox">
+            <button id="button">Submit</button>
+        </div>
+        <ul id="inputList"></ul>
+    </div>
+    <script>
+        const userInput = document.getElementById('inputBox')
+        const button = document.getElementById('button')
+        const inputList = document.getElementById('inputList')
+        function addInput(){
+            if(userInput !== ''){
+                let li = document.createElement('li')
+                li.textContent = userInput.value
+                inputList.appendChild(li)
+                userInput.value = ''
+            }
+        }
+        button.addEventListener('click', addInput)
+    </script>
+</body>
+</html>

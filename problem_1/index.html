@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+    }
+    .box{
+        height: 300px;
+        width: 300px;
+        background-color: red;
+        transition: all 0.3s ease;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="box" id="square"></div>
+    </div>
+    <script>
+        const square = document.getElementById('square')
+
+        square.addEventListener('click' , function(){
+            square.style.backgroundColor= 'yellow'
+            square.style.width = '600px'
+            square.style.height = '600px'
+        })
+    </script>
+</body>
+</html>
