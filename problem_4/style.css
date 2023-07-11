@@ -26,7 +26,6 @@
     list-style: none;
     gap: 40px;
     transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
 }
 
 .nav-items.show {
